@@ -48,7 +48,7 @@ cat values.yaml
 replicaCount: 2
 image:
   repository: "ubi8/ubi"
-  tag: lates
+  tag: latest
 ```
 
 ### Step 6: Verify the helm chart
