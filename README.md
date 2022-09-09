@@ -27,7 +27,7 @@ oc new-project $PROJECT_NAME
 git clone https://github.com/thomassuedbroecker/ubi-helm.git
 ```
 
-### Step 4: Verify the helm chart
+### Step 4: Navigate to the Helm chart directory
 
 ```sh
 export CHART_NAME=ubi-helm
