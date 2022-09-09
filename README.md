@@ -35,8 +35,6 @@ cd ./charts/$CHART_NAME
 
 ### Step 5: Verify the values.yaml content
 
-
-
 ```sh
 cat values.yaml
 ```
