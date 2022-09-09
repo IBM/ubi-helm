@@ -33,21 +33,34 @@ export CHART_NAME=ubi-helm
 cd ./charts/$CHART_NAME
 ```
 
-### Step 5: Verify the helm chart
+### Step 5: Verify the values.yaml content
+
+```sh
+cat values.yaml
+# Default values for chart.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+replicaCount: 2
+image:
+  repository: "ubi8/ubi"
+  tag: lates
+```
+
+### Step 6: Verify the helm chart
 
 ```sh
 helm dependency update .
 helm install --dry-run --debug $CHART_NAME .
 ```
 
-### Step 6: Install helm chart
+### Step 7: Install helm chart
 
 ```sh
 helm lint
 helm install $CHART_NAME .
 ```
 
-### Step 7: Verify the running pod
+### Step 8: Verify the running pods
 
 ```sh
 oc get pods
@@ -58,6 +71,9 @@ oc exec -n $PROJECT_NAME $POD --container $CHART_NAME -- ls
 * Example output:
 
 ```sh
+NAME                                 READY   STATUS             RESTARTS         AGE
+ubi-helm-ubi-helm-74d44b5c77-tzbcb   1/1     Running            7 (22s ago)      10m
+ubi-helm-ubi-helm-74d44b5c77-wljvr   1/1     Running            7 (27s ago)      10m
 bin
 boot
 dev
@@ -66,7 +82,7 @@ home
 ...
 ```
 
-### Step 8: Uninstall helm chart
+### Step 9: Uninstall helm chart
 
 ```sh
 helm uninstall ubi-helm
