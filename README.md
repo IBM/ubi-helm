@@ -35,8 +35,15 @@ cd ./charts/$CHART_NAME
 
 ### Step 5: Verify the values.yaml content
 
+
+
 ```sh
 cat values.yaml
+```
+
+* Example output:
+
+```sh
 # Default values for chart.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
