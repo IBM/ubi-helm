@@ -90,5 +90,5 @@ home
 ### Step 9: Uninstall helm chart
 
 ```sh
-helm uninstall ubi-helm
+helm uninstall $CHART_NAME
 ```
