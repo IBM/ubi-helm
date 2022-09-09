@@ -1,7 +1,7 @@
 # ubi-helm
 
 Deploy a pure [ubi image](https://catalog.redhat.com/software/containers/ubi8/ubi/5c359854d70cc534b3a3784e) as a container with [Helm](https://helm.sh/).
-With the values.yaml in the Helm chart can configure `replica count` of the pods. 
+With the [values.yaml](https://github.com/thomassuedbroecker/ubi-helm/blob/main/charts/ubi-helm/values.yaml) in the Helm chart can configure [`replica count`](https://github.com/thomassuedbroecker/ubi-helm/blob/main/charts/ubi-helm/values.yaml#L6) of the pods. 
 The deployed container is only the basic ubi operating system. 
 
 ```yaml
@@ -14,7 +14,7 @@ replicaCount: 2
 oc login --token=YOUR_TOKEN --server=YOUR_MASTERNODE_SERVER
 ```
 
-### Step 2: Create a OpenShift project
+### Step 2: Create an OpenShift project
 
 ```sh
 export PROJECT_NAME=obi-helm
