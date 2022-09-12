@@ -71,13 +71,13 @@ helm package .
 Successfully packaged chart and saved it to: /ubi-helm/charts/ubi-helm/ubi-helm-v1.0.0.tgz
 ```
 
-### Step 7: Install helm chart
+### Step 8: Install helm chart
 
 ```sh
 helm install $CHART_NAME .
 ```
 
-### Step 8: Verify the running pods
+### Step 9: Verify the running pods
 
 ```sh
 oc get pods
@@ -99,7 +99,7 @@ home
 ...
 ```
 
-### Step 9: Uninstall helm chart
+### Step 10: Uninstall helm chart
 
 ```sh
 helm uninstall $CHART_NAME
