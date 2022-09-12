@@ -51,17 +51,29 @@ image:
   tag: latest
 ```
 
-### Step 6: Verify the helm chart
+### Step 6: Verify the Helm chart
 
 ```sh
 helm dependency update .
 helm install --dry-run --debug $CHART_NAME .
+helm lint
+```
+
+### Step 7: (optionl) Create a [Helm package](https://helm.sh/docs/helm/helm_package/)
+
+```sh
+helm package .
+```
+
+* Example output:
+
+```sh
+Successfully packaged chart and saved it to: /ubi-helm/charts/ubi-helm/ubi-helm-v1.0.0.tgz
 ```
 
 ### Step 7: Install helm chart
 
 ```sh
-helm lint
 helm install $CHART_NAME .
 ```
 
