@@ -16,7 +16,7 @@ oc login --token=YOUR_TOKEN --server=YOUR_MASTERNODE_SERVER
 ### Step 2: Create an OpenShift project
 
 ```sh
-export PROJECT_NAME=obi-helm
+export PROJECT_NAME=ubi-helm
 oc new-project $PROJECT_NAME
 ```
 
